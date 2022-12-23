@@ -16,6 +16,7 @@ public class EmployeeController {
     public String viewHomePage(Model model) {
         /*
         TODO: THIS IS A SAMPLE TODO
+
          */
         model.addAttribute("listOfEmployees", employeeService.getAllEmployees());
         model.addAttribute("lang", LocaleContextHolder.getLocale().getLanguage());
