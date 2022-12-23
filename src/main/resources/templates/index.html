@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+  layout:decorator="layout">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script th:inline="javascript">
+        const lang = /*[[${lang}]]*/ "LANG";
+
+        $('#add-a-new').on('click', function () {
+            window.alert("asdas");
+            window.confirm(asadas);
+            $('#demo').attr("text", "asjbja").show();
+        })
+      </script>
+    <title th:text="#{employee.manage.system}"></title>
+</head>
+<body>
+<div>
+    <h1> Employees List </h1>
+    <div>
+    <span id ="demo"></span>
+    </div>
+    <div align="center">
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Employee First Name</th>
+              <th>Employee Last Name</th>
+              <th>Employee Email Address</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee :${listOfEmployees}">
+            <td th:text="${employee.firstName}"></td>
+            <td th:text="${employee.lastName}"></td>
+            <td th:text="${employee.email}"></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+<div style="margin:50px;">
+<input type="button" id="add-a-new" th:title="${lang}" th:text="ADD">
+
+</div>
+</body>
+</html>
