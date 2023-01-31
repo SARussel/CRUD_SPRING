@@ -13,18 +13,12 @@
 
     <script th:inline="javascript">
         const lang = /*[[${lang}]]*/ "LANG";
-
-        $('#add-a-new').on('click', function () {
-            window.alert("asdas");
-            window.confirm(asadas);
-            $('#demo').attr("text", "asjbja").show();
-        })
       </script>
     <title th:text="#{employee.manage.system}"></title>
 </head>
 <body>
 <div>
-    <h1> Employees List </h1>
+    <h1 class="text-center"> Employees List </h1>
     <div>
     <span id ="demo"></span>
     </div>
@@ -48,7 +42,10 @@
     </div>
 </div>
 <div style="margin:50px;" class="text-center">
-    <button type="button" id="add-a-new" th:title="${lang}" th:text="#{add.a.new}"></button>
+    <a id="add-a-new" th:title="${lang}" href="https://github.com/SARussel" th:text="#{add.a.new}"></a>
 </div>
+
+<script type="text/javascript" th:src="@{/resources/js/index/index.js}">
+</script>
 </body>
 </html>
