@@ -13,6 +13,7 @@
 
     <script th:inline="javascript">
         const lang = /*[[${lang}]]*/ "LANG";
+        const rootURL = /*[[${rootURL}]]*/ "ROOT_URL";
       </script>
     <title th:text="#{employee.manage.system}"></title>
 </head>
@@ -42,10 +43,11 @@
     </div>
 </div>
 <div style="margin:50px;" class="text-center">
-    <a id="add-a-new" th:title="${lang}" href="https://github.com/SARussel" th:text="#{add.a.new}"></a>
+    <a id="add-a-new" th:text="#{add.a.new}"></a>
 </div>
-
+<button type="button" id="toogle-lang" th:data="${lang}" class="btn-outline-primary" th:text="#{language.toogle}"></button>
 <script type="text/javascript" th:src="@{/resources/js/index/index.js}">
 </script>
+<script type="text/javascript" th:src="@{/resources/js/enums/enum.js}"></script>
 </body>
 </html>
