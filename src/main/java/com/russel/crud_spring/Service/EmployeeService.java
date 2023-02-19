@@ -8,4 +8,6 @@ import java.util.List;
 @Component
 public interface EmployeeService {
     List<Employee> getAllEmployees();
+
+    Employee addNewEmployee(Employee employee);
 }
